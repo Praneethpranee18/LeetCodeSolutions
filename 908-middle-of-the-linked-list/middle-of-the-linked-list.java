@@ -10,14 +10,14 @@
  */
 class Solution {
     public ListNode middleNode(ListNode head) {
-        int cnt = 0;
         ListNode curr = head;
+        int cnt = 0;
         while(curr != null){
-            cnt = cnt+1;
+            cnt += 1;
             curr = curr.next;
         }
         ListNode temp = head;
-        for(int i=0;i<(cnt/2);i++){
+        for(int i=0;i<cnt/2;i++){
             temp = temp.next;
         }
         return temp;
